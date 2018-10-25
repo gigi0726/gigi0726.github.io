@@ -1,0 +1,35 @@
+#sidebar {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    position: fixed;
+    right: 100%;
+    width: 90%;
+    height: 90%;
+}
+
+#sidebar-home {
+    background-color: white !important;
+}
+
+.sidebar-title {
+    background-color: #f2f2f2;
+    width: 100%;
+    height: 45px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.sidebar-title > li {
+    min-width: 200px; 
+}
+
+.sidebar-subtitle {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}

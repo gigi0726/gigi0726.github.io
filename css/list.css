@@ -1,0 +1,147 @@
+#page {
+    position: fixed;
+    top: 0%;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    /*background-color: var(--main-bg-color);*/
+}
+
+#bar {
+    height: 10%;
+    width: 100%;
+    /*background-color: #6499ef;*/
+    /*background-color: var(--main-bg-color);*/
+    display: flex;
+    align-items: center;
+}
+
+#sidebar-button {
+    float: left;
+    /*dynamic set width and height in setBar()*/
+    /*width: 10%;*/
+    /*height: 100%;*/
+    /*background-color: #002156;*/
+}
+
+#sidebar-button > img {
+    height: 100%;
+    width: 100%;
+}
+
+#search-container {
+    float: left;
+    height: 100%;
+    /*dynamic set width in setBar()*/
+
+    /*background-color: red;*/
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+#search-form {
+    width: 95%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#search {
+    width: 100%;
+    /*-webkit-appearance:none;*/
+}
+
+#cancel-button {
+    float: left;
+    height: 60%;
+    /*dynamic set width in setBar()*/
+    display: block;
+    margin-right: 10px;
+}
+
+#cancel-button > img {
+    height: 100%;
+}
+
+#content-container {
+    /*position: fixed;*/
+    /*left: 0%;*/
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+}
+
+#index-container {
+    height: 6%;
+    width: 100%;
+    border-bottom: 3px solid #fff2f2;
+    display: flex;
+    justify-content: center;
+}
+
+#not-show-index-container {
+    height: 6%;
+    width: 100%;
+    border-bottom: 3px solid #fff2f2;
+    display: none;
+    justify-content: center;
+}
+
+.index {
+    height: 100%;
+    width: 20%;
+    background-color: #fff2f2;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.clicked-index {
+    background-color: white !important;
+}
+
+#content-list-container {
+    float: left;
+    height: 94%;
+    width: 100%;
+    /*background-color: var(--main-bg-color);*/
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.content-list {
+    height: 20%;
+    width: 100%;
+    border-bottom: solid 1px #dddddd;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+#not-match {
+    height: 100%;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: #cecece;
+    font-weight: bold;
+}
+
+#mask {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    left:50%;
+    /*background-color: var(--main-bg-color);*/
+    opacity: 0;
+    z-index: 1;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>選課世新</title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <!-- set maximum scale to 0 to prevent zoom out/in screen -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="./css/reset.css">
+        <link rel="stylesheet" type="text/css" href="./css/main.css">
+        <link rel="stylesheet" type="text/css" href="./css/list.css">
+        <link rel="stylesheet" type="text/css" href="./css/content.css">
+        <link rel="stylesheet" type="text/css" href="./css/sidebar.css">
+
+        <!-- data 課程內容 -->
+        <script type="text/javascript" src="./js/data/art.js"></script>
+        <script type="text/javascript" src="./js/data/compulsory.js"></script>
+        <script type="text/javascript" src="./js/data/elective.js"></script>
+        <script type="text/javascript" src="./js/data/humanities.js"></script>
+        <script type="text/javascript" src="./js/data/science.js"></script>
+        <script type="text/javascript" src="./js/data/job.js"></script>
+        <script type="text/javascript" src="./js/data/society.js"></script>
+
+        <!-- script -->
+        <script type="text/javascript" src="./js/transition.js"></script>
+        <script type="text/javascript" src="./js/setBar.js"></script>
+        <script type="text/javascript" src="./js/setIndex.js"></script>
+        <script type="text/javascript" src="./js/setList.js"></script>
+        <script type="text/javascript" src="./js/showContent.js"></script>
+        <script type="text/javascript" src="./js/search.js"></script>
+        <script type="text/javascript" src="./js/sidebar.js"></script>
+        <script type="text/javascript" src="./js/setBgColor.js"></script>
+        <script type="text/javascript" src="./js/swipe.js"></script>
+    </head>
+
+    <body>
+        <!-- 初始頁面 -->
+        <div id="initial" class="page-container">
+            <div class="menu" id="item0" onclick="showFromRight(0)">資管系</div>
+            <div class="menu" id="item1" onclick="showFromRight(1)">通識課程</div>
+            <div class="menu" id="item2" onclick="showFromRight(2)">就業資訊</div>
+            <div class="menu" id="item3"><a href="https://www.facebook.com/" target="_blank">寒暑修揪團</a>
+            </div>
+        </div>
+
+        <!-- 課程列表頁面 -->
+        <div id="page" class="page-container set-bg">
+            <!-- 最上層的按鈕及搜尋欄 -->
+            <div id="bar" class="set-bg">
+                <!-- 按鈕 -->
+                <div id="sidebar-button" class="set-bg" onclick="triggerSidebar()">
+                    <img src="./img/button.png">
+                </div>
+                <!-- 搜尋欄 -->
+                <div id="search-container">
+                    <!-- need to use form to show 'search' on keyboard but need to disable submit function-->
+                    <form id="search-form" onSubmit="return false;">
+                        <input id="search" type="search" placeholder="搜尋" oninput="searchList()">
+                    </form>
+                </div>
+                <!-- 有打字時要顯示的取消按鈕（平時隱藏起來）-->
+                <div id="cancel-button">
+                    <img src="./img/cancel.png" onclick="cancelSearch()">
+                </div>
+            </div>
+
+            <!-- 側邊欄（平時隱藏起來） -->
+            <div id="sidebar">
+                <div class="sidebar-title" id="sidebar-home" onclick="returnHome()">
+                    <li>首頁</li>
+                </div>
+                <div class="sidebar-title">
+                    <li>資管系</li>
+                </div>
+                <div class="sidebar-subtitle" onclick="sidebarClick(0, false, 'compulsory')">必修</div>
+                <div class="sidebar-subtitle" onclick="sidebarClick(0, false, 'elective')">選修</div>
+                <div class="sidebar-title">
+                    <li>通識課程</li>
+                </div>
+                <div class="sidebar-subtitle" onclick="sidebarClick(1, false, 'society')">社會科學</div>
+                <div class="sidebar-subtitle" onclick="sidebarClick(1, false, 'humanities')">史哲學科</div>
+                <div class="sidebar-subtitle" onclick="sidebarClick(1, false, 'art')">文學藝術</div>
+                <div class="sidebar-subtitle" onclick="sidebarClick(1, false, 'science')">自然科學</div>
+                <div class="sidebar-title">
+                    <li>就業資訊</li>
+                </div>
+                <div class="sidebar-subtitle" onclick="sidebarClick(2, false, 'job')">人才招募</div>
+                <div class="sidebar-title">
+                    <li><a href="https://www.facebook.com/" target="_blank">寒暑修揪團</a>
+                    </li>
+                </div>
+            </div>
+
+            <!-- 課程列表大框框 -->
+            <div id="content-container">
+                <!-- 索引 -->
+                <div id="index-container" class="set-bg"></div>
+                <!-- 用來擋住索引的（平時隱藏起來） -->
+                <div id="not-show-index-container">搜尋結果</div>
+                <!-- 課程列表 -->
+                <div id="content-list-container" class="set-bg"></div>
+                <!-- 沒搜尋到匹配內容時要顯示的（平時隱藏起來） -->
+                <div id="not-match">no matched result</div>
+                <!-- 換索引時用來做效果的（平時隱藏起來） -->
+                <div id="mask" class="set-bg"></div>
+            </div>
+        </div>
+
+        <!-- 課程評價的內容頁面 -->
+        <div id="content" class="set-bg">
+            <!-- 返回的按鈕 -->
+            <div id="close-button">
+                <img src="./img/back.png" onclick="closePage()">
+            </div>
+            <div id="article-content"></div>
+        </div>
+
+    </body>
+
+</html>
