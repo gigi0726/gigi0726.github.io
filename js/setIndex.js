@@ -1,10 +1,12 @@
 // var index_count = [2, 4, 1];
 var index_list_eng = [['compulsory', 'elective'],
                       ['society', 'humanities', 'art', 'science'],
-                      ['job']];
+                      ['job'],
+                      ['winter', 'summer']];
 var index_list_chi = [['必修', '選修'],
                       ['社會科學', '史哲學科', '文學藝術', '自然科學'],
-                      ['人才招募']];
+                      ['人才招募'],
+                      ['寒修', '暑修']];
 
 // 設定索引欄
 function setIndex(listId) {
