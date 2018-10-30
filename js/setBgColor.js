@@ -1,7 +1,7 @@
 // 動態改變背景顏色
 // 要改顏色的話 main.css 裡也要改變
 
-var bgColor = ['#FFE8E8', '#E0E0FF', '#FFF7E8', '#99ffb0']
+var bgColor = ['#FFE8E8', '#E0E0FF', '#FFF7E8', '#d2ffad', '6ff2ad'];
 
 function dynamicSetBg(listId) {
     var bgs = document.getElementsByClassName('set-bg');
