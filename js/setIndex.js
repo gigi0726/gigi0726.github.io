@@ -2,7 +2,7 @@
 var index_list_eng = [['compulsory', 'elective'],
                       ['society', 'humanities', 'art', 'science'],
                       ['job'],
-                      ['winter']];
+                      ['summer']];
 var index_list_chi = [['必修', '選修'],
                       ['社會科學', '史哲學科', '文學藝術', '自然科學'],
                       ['人才招募'],
