@@ -1,4 +1,4 @@
-var wholeData = [data_compulsory, data_elective, data_society, data_humanities, data_art, data_science, data_job, data_winter];
+var wholeData = [data_compulsory, data_elective, data_society, data_humanities, data_art, data_science, data_job, data_summer];
 
 // 按下索引時，顯示過濾過的內容
 function showFilteredContentList(indexId) {
@@ -20,7 +20,7 @@ function showFilteredContentList(indexId) {
         tmp_index = 5;
     } else if (indexId == 'job') {
         tmp_index = 6;
-    }  else if (indexId == 'winter') {
+    }  else if (indexId == 'summer') {
         tmp_index = 7;
     }
 
