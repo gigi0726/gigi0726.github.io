@@ -5,16 +5,16 @@
 		versionCode = "1" 
 		version     = "1.0.0" >
  
-	<name>選課世新</name>
+	<name>課新來了</name>
 	
 	<description>
-		yayayaya
+		course shu
 	</description>
  
 	<icon src="./img/button.png" />
 	
 	<author href="" email="">
-		YuXian
+		gigi
 	</author>
 	
 	<plugin name="cordova-plugin-device" spec="^1.1.0" />
